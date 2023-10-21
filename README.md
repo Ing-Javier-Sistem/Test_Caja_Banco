@@ -64,7 +64,7 @@ Queremos agradecer a todos los miembros del equipo por su dedicación y esfuerzo
 ## Contacto
 
 Si tienes preguntas o comentarios, no dudes en ponerte en contacto con nosotros:
-
+ 
 - Thalia Villao: thalia@email.com
 - Eddie Game: eddie@email.com
 - Eduardo Ormeño: eduardo@email.com
