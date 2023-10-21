@@ -1,4 +1,4 @@
 class Cliente:
-    def __init__(self, nombre, identificacion):
-        self.nombre = nombre
+    def __init__(self, identificacion, nombre):
         self.identificacion = identificacion
+        self.nombre = nombre

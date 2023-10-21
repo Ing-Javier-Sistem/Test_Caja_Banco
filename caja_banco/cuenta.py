@@ -1,5 +1,5 @@
 class Cuenta:
-    def __init__(self, cliente, saldo):
+    def __init__(self, cliente, saldo=0):
         self.cliente = cliente
         self.saldo = saldo
         self.historial = []
