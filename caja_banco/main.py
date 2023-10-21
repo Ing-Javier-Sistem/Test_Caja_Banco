@@ -1,4 +1,20 @@
 from caja import Caja
+from database import Database  # Importa la clase Database desde tu módulo de base de datos
+
+# Crear una instancia de la clase Database
+db = Database()
+
+# Crear la tabla de clientes (esto solo se hace una vez)
+db.create_client_table()
+
+# Agregar un cliente
+db.add_client("12345", "Ejemplo Cliente", 1000)
+
+# Realizar otras operaciones en la base de datos si es necesario
+# ...
+
+# Cerrar la conexión cuando hayas terminado
+db.close()
 
 caja = Caja()
 
