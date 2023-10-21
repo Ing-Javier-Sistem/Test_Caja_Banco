@@ -1,13 +1,8 @@
-# Test_Caja_Banco
-Proyecto grupal 
-
-Claro, aquí tienes un ejemplo de un archivo README bien estructurado para el proyecto "Test_Caja_Banco" realizado por el grupo integrado por Thalia Villao, Eddie Game, Eduardo Ormeño y Eduardo Quinteros en Python:
-
 # Proyecto Test_Caja_Banco
 
 ## Descripción del Proyecto
 
-Este proyecto, denominado "Test_Caja_Banco", es una aplicación en Python que tiene como objetivo simular el funcionamiento de una caja de un banco. La aplicación permitirá realizar operaciones bancarias básicas, como depósitos, retiros y consultas de saldo, todo ello mediante una interfaz de línea de comandos.
+Este proyecto, denominado "Test_Caja_Banco", es una aplicación en Python que tiene como objetivo simular el funcionamiento de una caja de un banco. La aplicación permitirá realizar operaciones bancarias básicas, como depósitos, retiros y consultas de saldo, ademas debe imprimir la ultima persona que fue atendida, todo ello mediante una interfaz de línea de comandos.
 
 ## Integrantes del Grupo
 
@@ -20,12 +15,13 @@ Este proyecto, denominado "Test_Caja_Banco", es una aplicación en Python que ti
 
 El proyecto "Test_Caja_Banco" incluirá las siguientes funcionalidades principales:
 
-1. Registro de cuentas bancarias.
-2. Depósitos de dinero en cuentas existentes.
-3. Retiros de dinero de cuentas existentes.
-4. Consulta de saldo de cuentas.
-5. Historial de transacciones.
-6. Seguridad y autenticación.
+1. Registro de clientes.
+2. Validacion si el cliente ya existe.
+3. Retiros de dinero.
+4. Validacion de fondos-
+5. Consulta de saldo de cuentas.
+6. Historial de transacciones.
+7. Seguridad y autenticación.
 
 ## Requisitos
 
