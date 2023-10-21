@@ -22,16 +22,16 @@ class Database:
         ''')
 
     def add_client(self, identificacion, nombre, saldo=0):
-        self.cursor.execute("INSERT INTO clientes (identificacion, nombre, saldo) VALUES (?, ?, ?)",
+        self.cursor.execute('INSERT INTO clientes (clientes.identificacion, nombre, saldo) VALUES (?, ?, ?)',
                             (identificacion, nombre, saldo))
 
     def get_client_by_identification(self, identificacion):
-        self.cursor.execute("SELECT * FROM clientes WHERE identificacion = ?", (identificacion,))
+        self.cursor.execute("SELECT * FROM clientes WHERE clientes.identificacion = ?", (identificacion,))
         return self.cursor.fetchone()
 
     def update_client(self, identificacion, nombre, saldo):
-        self.cursor.execute("UPDATE clientes SET nombre = ?, saldo = ? WHERE identificacion = ?",
+        self.cursor.execute("UPDATE clientes SET nombre = ?, clientes.saldo = ? WHERE identificacion = ?",
                             (nombre, saldo, identificacion))
 
     def delete_client(self, identificacion):
-        self.cursor.execute("DELETE FROM clientes WHERE identificacion = ?", (identificacion,))
+        self.cursor.execute("DELETE FROM clientes WHERE clientes.identificacion = ?", (identificacion,))
