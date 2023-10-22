@@ -4,8 +4,8 @@ from modelo.clases_objetos import Cliente
 manejador = ManejadorClientes()
 
 while True:
-    print("1. Agregar Cliente")
-    print("2. Mostrar Clientes")
+    print("1. Agregar ClienteSSSS")
+    print("2. Mostrar ClientesSSS")
     print("3. Editar Cliente")
     print("4. Eliminar Cliente")
     print("5. Salir")
