@@ -1,50 +1,54 @@
-from caja import Caja
+from inf_datos import ManejadorClientes
+from cuenta import Cliente
 
-caja = Caja()
+manejador = ManejadorClientes()
 
 while True:
-    print("1. Registrar Cliente")
-    print("2. Realizar Depósito")
-    print("3. Realizar Retiro")
-    print("4. Consultar Saldo")
-    print("5. Última Persona Atendida")
-    print("6. Ver Todos los Clientes")
-    print("7. Eliminar Cliente")
-    print("8. Salir")
+    print("1. Agregar Cliente")
+    print("2. Mostrar Clientes")
+    print("3. Editar Cliente")
+    print("4. Eliminar Cliente")
+    print("5. Salir")
 
-    opcion = input("Seleccione una opción: ")
+    opcion = input("Selecciona una opción: ")
 
     if opcion == "1":
-        nombre = input("Nombre del cliente: ")
-        identificacion = input("Identificación del cliente: ")
-        resultado = caja.registrar_cliente(identificacion, nombre)
-        print(resultado)
+        cedula = input("Cedula: ")
+        nombre = input("Nombre: ")
+        apellido = input("Apellido: ")
+        ciudad = input("Ciudad: ")
+        monto = float(input("Monto: "))
+        efectivo = float(input("Efectivo: "))
+        tarjeta = float(input("Tarjeta: "))
+
+        cliente = Cliente(cedula, nombre, apellido, ciudad, monto, efectivo, tarjeta)
+        manejador.agregar_cliente(cliente)
+        print("Cliente agregado con éxito.")
+
     elif opcion == "2":
-        identificacion = input("Identificación del cliente: ")
-        monto = float(input("Monto a depositar: $"))
-        resultado = caja.depositar(identificacion, monto)
-        print(resultado)
-    elif opcion == "3":
-        identificacion = input("Identificación del cliente: ")
-        monto = float(input("Monto a retirar: $"))
-        resultado = caja.retirar(identificacion, monto)
-        print(resultado)
-    elif opcion == "4":
-        identificacion = input("Identificación del cliente: ")
-        saldo = caja.consultar_saldo(identificacion)
-        print(saldo)
-    elif opcion == "5":
-        ultima_persona_atendida = caja.obtener_ultima_persona_atendida()
-        print(f"Última persona atendida: {ultima_persona_atendida}")
-    elif opcion == "6":
-        print("Clientes registrados:")
-        for cliente in caja.obtener_clientes():
+        print('------------------------- >> Clientes Registrados << -----------------------------')
+        for cliente in manejador.clientes:
             print(cliente)
-    elif opcion == "7":
-        identificacion = input("Identificación del cliente a eliminar: ")
-        resultado = caja.eliminar_cliente(identificacion)
-        print(resultado)
-    elif opcion == "8":
+
+
+    elif opcion == "3":
+        nombre_buscar = input("Nombre del cliente a editar: ")
+        nuevo_cliente = Cliente(
+            input("Nueva Cedula: "),
+            input("Nuevo Nombre: "),
+            input("Nuevo Apellido: "),
+            input("Nueva Ciudad: "),
+            float(input("Nuevo Monto: ")),
+            float(input("Nuevo Efectivo: ")),
+            float(input("Nueva Tarjeta: "))
+        )
+        manejador.editar_cliente(nombre_buscar, nuevo_cliente)
+        print("Cliente editado con éxito.")
+
+    elif opcion == "4":
+        nombre_buscar = input("Nombre del cliente a eliminar: ")
+        manejador.eliminar_cliente(nombre_buscar)
+        print("Cliente eliminado con éxito.")
+
+    elif opcion == "5":
         break
-    else:
-        print("Opción no válida.")
