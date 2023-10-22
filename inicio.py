@@ -4,11 +4,12 @@ from modelo.clases_objetos import Cliente
 manejador = ManejadorClientes()
 
 while True:
-    print("1. Agregar ClienteSSSS")
-    print("2. Mostrar ClientesSSS")
+    print("1. Agregar Cliente")
+    print("2. Mostrar Clientes")
     print("3. Editar Cliente")
     print("4. Eliminar Cliente")
-    print("5. Salir")
+    print("5. Eliminar Todos los Clientes")
+    print("6. Salir")
 
     opcion = input("Selecciona una opción: ")
 
@@ -17,11 +18,10 @@ while True:
         nombre = input("Nombre: ")
         apellido = input("Apellido: ")
         ciudad = input("Ciudad: ")
-        monto = float(input("Monto: "))
-        efectivo = float(input("Efectivo: "))
-        tarjeta = float(input("Tarjeta: "))
+        type_cuenta = float(input("Tipo de cuenta -DEBITO-  -CORREINTE- o -CREDITO-: "))
+        number_card = float(input("Numero de cuenta: "))
 
-        cliente = Cliente(cedula, nombre, apellido, ciudad, monto, efectivo, tarjeta)
+        cliente = Cliente(cedula, nombre, apellido, ciudad, type_cuenta, number_card)
         manejador.agregar_cliente(cliente)
         print("Cliente agregado con éxito.")
 
@@ -38,17 +38,20 @@ while True:
             input("Nuevo Nombre: "),
             input("Nuevo Apellido: "),
             input("Nueva Ciudad: "),
-            float(input("Nuevo Monto: ")),
-            float(input("Nuevo Efectivo: ")),
-            float(input("Nueva Tarjeta: "))
+            float(input("Tipo de cuenta -DEBITO-  -CORREINTE- o -CREDITO-: ")),
+            float(input("Nuevo de cuenta: ")),
         )
         manejador.editar_cliente(nombre_buscar, nuevo_cliente)
         print("Cliente editado con éxito.")
 
     elif opcion == "4":
-        nombre_buscar = input("Nombre del cliente a eliminar: ")
-        manejador.eliminar_cliente(nombre_buscar)
+        nombre_eliminar = input("Nombre del cliente a eliminar: ")
+        manejador.eliminar_cliente(nombre_eliminar)
         print("Cliente eliminado con éxito.")
 
     elif opcion == "5":
+        manejador.eliminar_todos_los_clientes()
+        print("Todos los clientes han sido eliminados.")
+
+    elif opcion == "6":
         break
