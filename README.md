@@ -18,10 +18,9 @@ El proyecto "Test_Caja_Banco" incluirá las siguientes funcionalidades principal
 1. Registro de clientes.
 2. Validacion si el cliente ya existe.
 3. Retiros de dinero.
-4. Validacion de fondos-
+4. Validacion de fondos
 5. Consulta de saldo de cuentas.
-6. Historial de transacciones.
-7. Seguridad y autenticación.
+
 
 ## Requisitos
 
