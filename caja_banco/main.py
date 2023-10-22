@@ -1,5 +1,5 @@
-from inf_datos import ManejadorClientes
-from cuenta import Cliente
+from cuenta import ManejadorClientes
+from cliente import Cliente
 
 manejador = ManejadorClientes()
 
