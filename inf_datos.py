@@ -12,7 +12,7 @@ def cargar_clientes():
             next(lector_csv)
             for row in lector_csv:
                 cedula, nombre, apellido, ciudad, type_cuenta, number_card = row
-                cliente = Cliente(cedula, nombre, apellido, ciudad, float(type_cuenta), float(number_card))
+                cliente = Cliente(cedula, nombre, apellido, ciudad, type_cuenta, float(number_card))
                 clientes.append(cliente)
     except FileNotFoundError:
         pass

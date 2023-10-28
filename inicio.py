@@ -18,7 +18,7 @@ while True:
         nombre = input("Nombre: ")
         apellido = input("Apellido: ")
         ciudad = input("Ciudad: ")
-        type_cuenta = float(input("Tipo de cuenta -DEBITO-  -CORREINTE- o -CREDITO-: "))
+        type_cuenta = input("Tipo de cuenta -DEBITO-  -CORREINTE- o -CREDITO-: ")
         number_card = float(input("Numero de cuenta: "))
 
         cliente = Cliente(cedula, nombre, apellido, ciudad, type_cuenta, number_card)
@@ -38,8 +38,8 @@ while True:
             input("Nuevo Nombre: "),
             input("Nuevo Apellido: "),
             input("Nueva Ciudad: "),
-            float(input("Tipo de cuenta -DEBITO-  -CORREINTE- o -CREDITO-: ")),
-            float(input("Nuevo de cuenta: ")),
+            input("Tipo de cuenta -DEBITO-  -CORREINTE- o -CREDITO-: "),
+            float(input("Nuevo numero de cuenta: ")),
         )
         manejador.editar_cliente(nombre_buscar, nuevo_cliente)
         print("Cliente editado con éxito.")
